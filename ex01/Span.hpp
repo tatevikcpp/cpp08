@@ -11,11 +11,7 @@ class Span
         ~Span();
         Span& operator=(const Span& obj);
         void addNumber(int a);
-        void print()
-        {
-            for (size_t i = 0; i < _vec.size(); ++i)
-                std::cout << _vec[i] << " ";
-        }
+        void print();
         template<typename T>
         void addmanyNum(T begin, T end)
         {

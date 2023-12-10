@@ -68,3 +68,8 @@ unsigned int Span::shortestSpan()
     }
     return (min);
 }
+void Span::print()
+{
+    for (size_t i = 0; i < _vec.size(); ++i)
+        std::cout << _vec[i] << " ";
+}
