@@ -35,7 +35,7 @@ void Span::addNumber(int a)
 {
     if (this->_vec.size() >= this->_size)
     {
-        throw std::runtime_error("too many integers");
+        throw std::runtime_error("out of range");
     }
     this->_vec.push_back(a);
 }
@@ -58,7 +58,7 @@ unsigned int Span::shortestSpan()
         throw std::runtime_error("too few integers");
     }
     std::sort(this->_vec.begin(), this->_vec.end());
-    int min = this->_vec[this->_vec.size() - 1] - this->_vec[0]; // optimizacnel
+    int min = this->_vec[this->_vec.size() - 1] - this->_vec[0];
     int span = 0;
     for(size_t i = 0; i < this->_vec.size() - 1; ++i)
     {

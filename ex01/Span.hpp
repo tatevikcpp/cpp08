@@ -15,6 +15,9 @@ class Span
         template<typename T>
         void addmanyNum(T begin, T end)
         {
+            size_t lendth = this->_size + std::distance(begin, end);
+            if (lendth > this->_size)
+                throw std::runtime_error("out of range");
             for (; begin != end; ++begin)
                 _vec.push_back(*begin);
         }
